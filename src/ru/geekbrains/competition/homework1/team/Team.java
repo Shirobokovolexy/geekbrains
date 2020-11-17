@@ -1,6 +1,9 @@
-package ru.geekbrains.competition.team;
+package ru.geekbrains.competition.homework1.team;
 
 public class Team {
+
+    public Team[] competition;
+
     String teamName;
     String motto;
     String name;
@@ -17,9 +20,10 @@ public class Team {
         return onDistance;
     }
 
-    public Team(String teamName, String motto) {
+    public Team(String teamName, String motto, Team[] competition) {
         this.teamName = teamName;
         this.motto = motto;
+        this.competition = competition;
     }
 
     public Team(String name, int maxRunDistance, int maxSwimDistance, int maxJumpHeight) {
@@ -29,9 +33,10 @@ public class Team {
         this.maxJumpHeight = maxJumpHeight;
         this.onDistance = true;
     }
-public void Motto () {
-    System.out.println("На полосу препядствий врывается команда " + teamName + ". Их девиз: \n" + motto);
-}
+
+    public void motto() {
+        System.out.println("На полосу препядствий врывается команда " + teamName + ". Их девиз: \n" + motto);
+    }
     public void run(int dist) {
         if (dist <= maxRunDistance) {
             System.out.println(name + " успешно справился с кроссом");

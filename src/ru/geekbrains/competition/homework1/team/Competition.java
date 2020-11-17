@@ -1,9 +1,9 @@
-package ru.geekbrains.competition.team;
+package ru.geekbrains.competition.homework1.team;
 
 public class Competition extends Team {
 
-    public Competition(String teamName, String motto) {
-        super(teamName, motto);
+    public Competition(String teamName, String motto, Team[] competition) {
+        super(teamName, motto, competition);
     }
 
     public Competition(String name, int maxRunDistance, int maxSwimDistance, int maxJumpHeight) {
